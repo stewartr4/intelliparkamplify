@@ -14,6 +14,12 @@
     "categories": {
       "auth": {
         "intelliparkamplify4c4e4afc": {}
+      },
+      "api": {
+        "intelliparkamplify": {}
+      },
+      "storage": {
+        "imagestorage": {}
       }
     }
   }
