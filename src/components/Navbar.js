@@ -1,6 +1,6 @@
 // Navbar.js
 import { Button, Flex, Image, Spacer } from "@chakra-ui/react";
-import logo from "../logo.svg";
+import logo from "/Users/rianstewart/Documents/SHU - SPRING 24/intelliparkamplify/src/images/intelliPARK-logo.png";
 import { Link } from 'react-router-dom'; // Import Link
 
 function Navbar({ signOut }) {
@@ -13,7 +13,7 @@ function Navbar({ signOut }) {
       borderBottom="1px"
       borderColor="gray.400"
     >
-      <Image src={logo} className="App-logo" alt="logo" boxSize="40px" />
+      <Image src={logo} className="App-logo" alt="logo" boxSize="60px" />
       <Spacer />
       <Flex>
         <Link to="/Home">
@@ -36,9 +36,11 @@ function Navbar({ signOut }) {
           Admin Console
         </Button>
         </Link>
+        <Link to="/Contact">
         <Button variant="ghost" colorScheme="blue">
           Contact
         </Button>
+        </Link>
       </Flex>
       <Button onClick={signOut} colorScheme="red">
         Sign Out
