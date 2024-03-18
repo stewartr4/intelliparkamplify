@@ -22,7 +22,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 
 
 function App({ signOut }) {
-  const [isContactModalOpen, setContactModalOpen] = useState(false);
+  
   
   return (
     <ChakraProvider theme={theme}>
@@ -42,6 +42,6 @@ function App({ signOut }) {
   );
 }
 
-export default App;
+export default withAuthenticator(App);
 
 
