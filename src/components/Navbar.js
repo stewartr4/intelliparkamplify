@@ -1,6 +1,6 @@
 // Navbar.js
 import { Button, Flex, Image, Spacer } from "@chakra-ui/react";
-import logo from "/Users/rianstewart/Documents/SHU - SPRING 24/intelliparkamplify/src/images/intelliPARK-logo.png";
+import logo from "../images/intelliPARK-logo.png";
 import { Link } from 'react-router-dom'; // Import Link
 
 function Navbar({ signOut }) {
