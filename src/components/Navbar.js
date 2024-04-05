@@ -13,7 +13,7 @@ function Navbar({ signOut }) {
       borderBottom="1px"
       borderColor="gray.400"
     >
-      <Image src={logo} className="App-logo" alt="logo" boxSize="60px" />
+      <Image src={logo} className="App-logo" alt="logo" boxSize="80px" />
       <Spacer />
       <Flex>
         <Link to="/Home">
