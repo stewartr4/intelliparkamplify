@@ -1,50 +1,47 @@
-// Home.js
-import { Box, Heading, Text } from "@chakra-ui/react";
-import {
-    Accordion,
-    AccordionItem,
-    AccordionButton,
-    AccordionPanel,
-    AccordionIcon,
-  } from '@chakra-ui/react'
+import { Box, Button, Heading, Input, Text } from "@chakra-ui/react";
+import { useState } from "react";
 
 function Home() {
-  return (
-    <Accordion>
-  <AccordionItem>
-    <h2>
-      <AccordionButton>
-        <Box as="span" flex='1' textAlign='left'>
-          Section 1 title
-        </Box>
-        <AccordionIcon />
-      </AccordionButton>
-    </h2>
-    <AccordionPanel pb={4}>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.
-    </AccordionPanel>
-  </AccordionItem>
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
-  <AccordionItem>
-    <h2>
-      <AccordionButton>
-        <Box as="span" flex='1' textAlign='left'>
-          Section 2 title
+  const handleLogin = () => {
+    // Your login logic goes here
+    // For demonstration, let's just show a pop-up message
+    alert("Thank you for logging into the Intellipark admin console!");
+  };
+
+  return (
+    <Box maxW="500px" mx="auto" mt="20">
+      <Heading as="h1" textAlign="center" mb="6">
+        Welcome to the Intellipark Admin Console
+      </Heading>
+      <Box bg="white" p="6" borderRadius="md" boxShadow="md">
+        <Text textAlign="center" mb="4">
+          Please log in with your credentials below
+        </Text>
+        <Box mb="4">
+          <Input
+            placeholder="Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            color="black"
+          />
         </Box>
-        <AccordionIcon />
-      </AccordionButton>
-    </h2>
-    <AccordionPanel pb={4}>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.
-    </AccordionPanel>
-  </AccordionItem>
-</Accordion>
+        <Box mb="4">
+          <Input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            color="black"
+          />
+        </Box>
+        <Button colorScheme="blue" size="lg" w="full" onClick={handleLogin}>
+          Login
+        </Button>
+      </Box>
+    </Box>
   );
 }
 
